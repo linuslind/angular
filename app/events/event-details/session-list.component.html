@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+<div class="row" *ngFor="let session of visibleSessions">
+  <div class="col-md-1">
+    <div *ngIf="auth.isAuthenticated()">
+    <upvote (vote)="toggleVote(session)" [count]="session.voters.length" [voted]="userHasVoted(session)">
+    </upvote>
+    </div>
+  </div>
+=======
+<div class="row" *ngFor="let session of sessions">
+>>>>>>> 79caa07b7ec12ce6c156194e256978c4f334f990
+  <div class="col-md-10">
+    <collapsible-well>
+      <div well-title>
+        {{session.name}}
+        <i *ngIf="session.voters.length > 3" class="glyphicon glyphicon-fire" style="color:red"></i>
+      </div>
+      <div well-body>
+        <h6>{{session.presenter}}</h6>
+<<<<<<< HEAD
+        <span>Duration: {{session.duration | duration}}</span><br />
+=======
+        <span>Duration: {{session.duration}}</span><br />
+>>>>>>> 79caa07b7ec12ce6c156194e256978c4f334f990
+        <span>Level: {{session.level}}</span>
+
+        <p>{{session.abstract}}</p>
+      </div>
+    </collapsible-well>
+  </div>
+</div>
